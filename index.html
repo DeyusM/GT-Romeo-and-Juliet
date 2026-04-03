@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romeo & Juliet | GT Project</title>
+    <meta name="description"
+        content="A visual exploration of claims across three texts in the tragedy of Romeo and Juliet.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Custom Cursor Setup -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <!-- Global Interactive Physics Canvas -->
+    <canvas id="global-physics-canvas"></canvas>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">R & J</div>
+        <ul class="nav-links">
+            <li><a href="#argument">Argument</a></li>
+            <li><a href="#texts">The Texts</a></li>
+            <li><a href="#balcony">The Balcony</a></li>
+            <li><a href="#characters">Connections</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+        <div class="nav-toggle">
+            <span class="house-label capulet">House Capulet</span>
+            <label class="switch">
+                <input type="checkbox" id="house-toggle">
+                <span class="slider round"></span>
+            </label>
+            <span class="house-label montague">House Montague</span>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+            <h1 class="title">Romeo <em>&</em> Juliet</h1>
+            <p class="subtitle">An Exploration of Love & Tragic Fate</p>
+            <p style="margin-top: 1.5rem; font-size: 1.1rem; color: var(--color-gold); letter-spacing: 1px; opacity: 0.9;">By Deyus, Minerva, Meghna, Deylannis, & Jonathan</p>
+        </div>
+        <div class="scroll-indicator">↓</div>
+    </header>
+
+    <main class="container">
+        <!-- 1st Text Place: Argument -->
+        <section class="section introduction reveal" id="argument">
+            <div class="glass-card accent-card">
+                <h2>I. The Argument</h2>
+                <div class="filler-text" style="font-size: 1.1rem; line-height: 1.8;">
+                    <p><strong>Question:</strong> How do the societal values, established by the setting, determine the fate of the star-crossed lovers archetype across different texts?</p>
+                    <p><strong>Claim:</strong> Those who are marginalized by society for their identity are fated for their love to fail.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3 Texts Sections -->
+        <div class="texts-grid" id="texts">
+            <!-- Text 1 -->
+            <section class="section text-section reveal-left">
+                <div class="image-wrapper flip-container">
+                    <div class="flipper">
+                        <div class="front">
+                            <img src="assets/romeo_italy.png" alt="16th Century Warring Italy">
+                        </div>
+                        <div class="back">
+                            <h4>The Setting</h4>
+                            <p><em>"Two households, both alike in dignity..."</em><br><br>A politically fragmented 16th-century Italy defined by ideological factions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card content-card">
+                    <h3>Text I: Romeo and Juliet</h3>
+                    <div class="filler-text" style="font-size: 0.95rem; line-height: 1.6;">
+                        <p>The Italy in “Romeo and Juliet”, likely set in the 16th century, was drastically different from the one known today. The unification of Italy would be completed hundreds of years later in 1861, for now it was an immensely politically fragmented collection of constantly warring city states and their noble families.</p>
+                        <p>Nobles would assign themselves to ideological factions such as the Guelphs and the Ghibellines who supported the Pope and the Holy Roman Empire respectively, making conflict common in daily life (Historic World Events 2017). This history is demonstrated in Romeo and Juliet with the hostile nature of their opposing families. The tragic fate that befalls the star-crossed lovers reflects the struggles for power among Italian nobles which prevented both romantic and political unification.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Text 2 -->
+            <section class="section text-section reverse reveal-right">
+                <div class="image-wrapper flip-container">
+                    <div class="flipper">
+                        <div class="front">
+                            <img src="assets/titanic_class.png" alt="Titanic first class boarding lifeboat">
+                        </div>
+                        <div class="back">
+                            <h4>The Class Divide</h4>
+                            <p><em>"You're going to get out of here, you're going to go on and you're going to make lots of babies..."</em><br><br>Societal class divisions act as an immovable force against their survival.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card content-card" style="position: relative;">
+                    <div style="position: absolute; top: 1.5rem; right: 2rem; color: var(--color-gold); font-size: 0.85rem; font-weight: bold; opacity: 0.8;">
+                        ↓ Scroll for more ↓
+                    </div>
+                    <h3>Text II: Titanic</h3>
+                    <div class="filler-text" style="font-size: 0.9rem; line-height: 1.5; overflow-y: auto; max-height: 350px; padding-right: 15px;">
+                        <p>The powerful vs the powerless can be seen through in titanic which in the evacuation scene can be seen prioritizing the first class. The richer passengers are led to more safety while many of the third class passengers are locked below to die and ultimately are let out but to no advantage seeing as most of them do eventually die. There are however some exceptions to this seeing as even among some first class passengers the men were left prioritizing women and children leading most of the men to be powerless. This inequality is led to be deadly and leaves many people to die.</p> 
+                        <p>Social classes can be seen in Titanic as there are distinctions such as Rose and Cal that are first class, who wear expensive clothing and formal behavior as seen as they are visibly richer than the lower class. Meanwhile in the lower class Jack is visible as more free, not bound by strict formal expectations allowing him to be free and not bound by social standards as seen through his clothing and the way he obtains his ticket in the first place through poker showing him to be significantly less rich compared to Rose and the upper class. The distinctions are clear and obvious as seen through the characters behavior and social standard which varies greatly.</p>
+                        <p>The failed romance between the two, while depicted as heartbreaking, is grounds for a lot more as their romance is genuine and breaking social standards. Rose is comparatively richer compared to Jack and this economic inequality leads to disaster when the ship sinks and first class passengers are prioritized over the third class passengers leading to their separation and the heartbreak in the movie. Society can be seen trying to split them up due to their economic imbalance as seen through Cal (Rose’s Fiance at the time) who is constantly trying to figure out how to separate the two and being the catalyst for Jack's death. Jack’s death is tragic and it shows how powerless he is in an unequal economic system leading to heartbreak.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Text 3 -->
+            <section class="section text-section reveal-left">
+                <div class="image-wrapper flip-container">
+                    <div class="flipper">
+                        <div class="front">
+                            <img src="assets/westsidestory.png" alt="West Side Story alleyway">
+                        </div>
+                        <div class="back">
+                            <h4>The Streets</h4>
+                            <p><em>"Tonight, tonight..."</em><br><br>The rumble reflects the uncontrollable acceleration
+                                of violence born from prejudice.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card content-card" style="position: relative;">
+                    <div style="position: absolute; top: 1.5rem; right: 2rem; color: var(--color-gold); font-size: 0.85rem; font-weight: bold; opacity: 0.8;">
+                        ↓ Scroll for more ↓
+                    </div>
+                    <h3>Text III: West Side Story</h3>
+                    <div class="filler-text" style="font-size: 0.9rem; line-height: 1.5; overflow-y: auto; max-height: 350px; padding-right: 15px;">
+                        <p><strong>Historical:</strong> West Side Story was set in the 1950’s in New York City. Around this time many more immigrants were coming to New York, including Puerto Ricans. The rise of Puerto Rican immigrants moving into New York led to the creation of the rivalry between the Jets, a white American gang and the Sharks, which were Puerto Rican, and they both fought for territory. The history behind the two rival gangs ties back to racism, and how white people didn’t like people of any other color. The Jets didn’t like the Sharks because they were Puerto Ricans, as well as the Jets feared that they were going to take their land and jobs. But the racism didn’t apply just to the jets, the Sharks also hated the Jets as well because they were white, many of the people in the Puerto Rican gang wishing to go back to Puerto Rico once they got rich enough in New York. This racism dates back to hundreds of years ago, and  it prohibited Maria and Tony being together; eventually ending the lives of Tony, Bernando and Riff. Maria and Tony were star-crossed lovers fated to never be together because of the history of racism.The deaths were tragic, but every single one all tied back to the racism in the history of white Americans and Puerto Ricans.</p>
+                        <p><strong>Cultural:</strong> West Side Story, set in New York City, portrays the feud between the immigrant groups of Irish and Puerto Rican descent, whose longstanding conflict is caused by differences in culture, race, and languages. Each side holds a deep sense of pride in their identities which further fuels resentment toward the other group. These strong cultural identities shape both of the immigrant groups’ perspectives, preventing them from seeing beyond their own prejudice. The rigid social boundaries and hostility established by the two groups put the relationship between Tony and Maria, two lovers from opposing sides, at risk. This important connection between the main characters demonstrates how these divisions are socially constructed rather than being predetermined. The tragic ending of West Side Story emphasizes how unchecked social tensions lead to destructive consequences. All the fatalities arise due to all of the missed opportunities for understanding and communication between both sides. The musical critiques ethnocentrism by illustrating how pride and bias blind opposing groups from realizing their similarities and the power of community. The purpose of this text is to show that while true love can arise from societal divisions, it cannot survive in a society dominated by prejudice and hatred.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Star-Crossed Lovers Constellation Effect -->
+        <section class="section reveal" id="balcony">
+            <h2 style="text-align: center; margin-bottom: 2rem; color: var(--color-gold);">II. Star-Crossed Lovers</h2>
+            <div class="glass-card" style="position: relative; height: 600px; overflow:hidden; padding: 0;">
+                
+                <div id="constellation-container" style="width: 100%; height: 100%; background: radial-gradient(circle at center, #1b0c15 0%, #080306 100%); position: relative;">
+                    <canvas id="constellation-canvas"></canvas>
+                    
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: var(--color-gold); pointer-events: none; z-index: 10; width: 100%;">
+                        <h3 style="font-size: 3.5rem; text-shadow: 0 4px 15px rgba(0,0,0,0.9); margin-bottom: 0.5rem; letter-spacing: 2px;">Constellations of Fate</h3>
+                        <p style="font-size: 1.3rem; color: var(--color-text); text-shadow: 0 2px 10px rgba(0,0,0,0.9); font-style: italic;">
+                            Move your mouse to weave the tragic web of stars.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Character Web -->
+        <section class="section reveal" id="characters">
+            <h2 style="text-align: center; margin-bottom: 2rem; color: var(--color-gold);">III. Character Connections
+            </h2>
+            <div class="glass-card">
+                <div class="character-grid">
+                    <div class="character-node capulet-node" data-char="juliet">Juliet</div>
+                    <div class="character-node montague-node" data-char="romeo">Romeo</div>
+                    <div class="character-node capulet-node" data-char="tybalt">Tybalt</div>
+                    <div class="character-node montague-node" data-char="mercutio">Mercutio</div>
+                    <div class="character-node neutral-node" data-char="nurse">The Nurse</div>
+                    <div class="character-node neutral-node" data-char="friar">Friar Laurence</div>
+                </div>
+                <div class="character-panel" id="char-panel">
+                    <h3 style="color: var(--color-gold); font-size: 1.8rem; margin-bottom: 1rem;">Select a Character
+                    </h3>
+                    <p class="char-desc" style="font-size: 1.1rem; color: var(--color-text-muted);">Click on any name
+                        above to vividly map their fatal connections and loyalties.</p>
+                    <ul class="char-connections" style="margin-top: 1rem; font-size:1.1rem; list-style-type: square;">
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="section conclusion reveal" id="conclusion" style="margin-bottom: 0;">
+            <div class="glass-card accent-card">
+                <h2>IV. Synthesis & Conclusion</h2>
+                <div class="filler-text" style="font-size: 1rem; line-height: 1.7;">
+                    <p>The factor that determines starcrossed lovers fate are the social conflicts of the setting, not necessarily marginalization. The clandestine romances range from rival Italian noble families, to conflicting immigrant groups, and a cross-class affair, across our selected texts. However, many modern stories use marginalization as the vehicle of fate.</p>
+                    <p>While Romeo and Juliet focuses on the struggles of two nobles, Titanic and West Side Story turn their subject to those with marginalized identities. Although in the past star crossed lovers was understood in the context of hostile aristocratic politics, in the modern era it is portrayed through the hate bred by our society. More than ever, class and cultural tension divide humanity.</p>
+                    <p>The contrasting class positions of Jack and Rose is part of what makes their love forbidden. Rose being engaged to Cal purely because to his of social position. This ultimately dooms the pair when Rose refuses to board a lifeboat without Jack. Similarly, West Side Story uses the ethnic and cultural differences between Tony and Maria to separate them. Neither the Jets nor the Sharks are able to get past their prejudices, eventually leading to immense violence and Tony’s death.</p>
+                    <p>Applying these societal dynamics to the the star-crossed lovers archetype allows not only for artists to appeal to modern audiences, but also to criticize the social structures that destroy connection.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Deyus Mhatre GT Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
